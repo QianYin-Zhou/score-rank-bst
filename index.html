@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>二分搜索树实现成绩排名</title>
+		<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<style type="text/css">
+			body {
+				margin: 0;
+				background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+			}
+			.container {
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				padding: 20px;
+				box-sizing: border-box;
+			}
+			.container > div {
+				width: 85%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<div class="container">
+				<div class="header">
+					<button 
+						class="btn btn-primary" 
+						data-toggle="modal" 
+						data-target="#myModal">录入成绩</button>
+					<!-- 模态框（Modal） -->
+					<div 
+						class="modal fade" 
+						id="myModal" 
+						tabindex="-1" 
+						role="dialog" 
+						aria-labelledby="myModalLabel" 
+						aria-hidden="true">
+					    <div class="modal-dialog">
+					        <div class="modal-content">
+					            <div class="modal-header">
+					                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					                <h4 class="modal-title" id="myModalLabel">完成信息</h4>
+					            </div>
+					            <div class="modal-body">
+												<input type="text" class="form-control" id="name" placeholder="请输入名字，给我好好取">
+												<br>
+												<input type="text" class="form-control" id="score" placeholder="输入一个整数成绩">
+											</div>
+					            <div class="modal-footer">
+					                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					                <button type="button" class="btn btn-primary" id="btnOK">完成</button>
+					            </div>
+					        </div>
+					    </div>
+					</div>
+				</div>
+				<div class="main">
+					<table class="table table-hover" style="margin: 25px 0px;;">
+					  <caption id="tableCaption"></caption>
+					  <thead>
+					    <tr>
+					      <th>序号</th>
+					      <th>成绩</th>
+					      <th>排名</th>
+					    </tr>
+					  </thead>
+					  <tbody id="tableBody">
+					    <!-- <tr>
+					      <td>熊大</td>
+					      <td>99</td>
+					      <td>2</td>
+					    </tr>-->
+					  </tbody>
+					</table>
+				</div>
+				<span style="font-weight: 100;">@copy right by cissy</span>
+			</div>
+		</div>
+		
+		<!-- js部分 -->
+		<!-- 1. bootstrap所需cdn -->
+		<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		
+		<!-- 2. 二叉搜索树实现 -->
+		<script src="./index.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
